@@ -1,0 +1,158 @@
+.offers-features {
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  margin-bottom: 35px;
+}
+
+.offers-features__list {
+  flex-grow: 1;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.offers-features__items {
+  text-align: left;
+  .font-parameter(14px, 30px);
+  color: @blue;
+
+  list-style: none;
+
+  width: 280px;
+
+  padding: 0;
+  margin: 0;
+
+  &:first-child {
+    border-top: 2px solid @bordercolor;
+    border-left: 2px solid @bordercolor;
+  }
+}
+
+.offers-features__item {
+  position: relative;
+
+  box-sizing: border-box;
+
+  min-height: 61px;
+
+  background-color: @white;
+
+  padding-left: 24px;
+  padding-top: 15px;
+
+  border: 2px solid @bordercolor;
+  border-top: none;
+  border-left: none;
+
+  &--yes::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 20px;
+    right: 17px;
+
+    width: 31px;
+    height: 21px;
+
+    background: url("../img/icon-yes.svg") no-repeat center;
+    background-size: 100%;
+  }
+
+  &--no::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 15px;
+    right: 19px;
+
+    width: 27px;
+    height: 26px;
+
+    background: url("../img/icon-no.svg") no-repeat center;
+    background-size: 100%;
+  }
+}
+
+.offers-features__items {
+}
+
+@media @tablet-widths {
+
+  .offers-features__list {
+    width: 155px;
+
+    &--hide {
+      display: block;
+    }
+  }
+
+  .offers-features__items {
+    width: auto;
+
+    text-transform: none;
+
+    &--no-text {
+      font-size: 0;
+    }
+  }
+
+  .offers-features__item {
+    width: auto;
+
+    padding-left: 13px;
+    padding-top: 7px;
+
+    min-height: 48px;
+
+    &--yes::after {
+      left: 50%;
+      top: 13px;
+
+      margin-left: -14px;
+    }
+
+    &--no::after {
+      left: 50%;
+      top: 9px;
+
+      margin-left: -14px;
+    }
+  }
+}
+
+@media @desktop-widths {
+
+  .offers-features__items {
+    font-size: 18px;
+
+    &--no-text {
+      font-size: 0;
+    }
+  }
+
+  .offers-features__item {
+    height: 61px;
+
+    padding-top: 15px;
+    padding-left: 22px;
+
+    &--yes::after {
+      top: 22px;
+      margin-left: -13px;
+    }
+
+    &--no::after {
+      top: 16px;
+      margin-left: -12px;
+    }
+  }
+
+}

@@ -1,0 +1,105 @@
+.user-app-check {
+  .font-parameter(18px, 30px);
+  color: @blue;
+  text-align: left;
+
+  padding-left: 90px;
+  padding-bottom: 45px;
+
+  &:first-child {
+    padding-top: 37px;
+  }
+}
+
+.user-app-check__title {
+  position: relative;
+}
+
+.user-app-check__title > input {
+  display: none;
+}
+
+.user-app-check__check {
+
+  &::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: -8px;
+    left: -69px;
+
+    width: 35px;
+    height: 35px;
+
+    background-color: @white;
+
+    border: 2px solid @bordercolor;
+    border-radius: 50%;
+  }
+}
+
+.user-app-check__check {
+  &:hover::before {
+    border-color: @blue;
+  }
+}
+
+.user-app-check__check {
+  &:active::before {
+    border-color: @crimson;
+  }
+}
+
+input:checked + .user-app-check__check {
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 4px;
+    left: -57px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: @crimson;
+
+    border-radius: 50%;
+  }
+}
+
+@media @tablet-widths {
+
+  .user-app-check {
+    padding-left: 116px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .user-app-check__check {
+    &::before {
+      left: -60px;
+    }
+  }
+
+  input:checked + .user-app-check__check {
+    &::after {
+      left: -48px;
+    }
+  }
+
+}
+
+@media @desktop-widths {
+  .user-app-check {
+    padding-left: 133px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+}

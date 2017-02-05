@@ -1,0 +1,157 @@
+.contacts {
+  // .web-outline;
+}
+
+.contacts__wrapper {
+  // .web-outline;
+  .container();
+
+  box-sizing: border-box;
+  padding: 0 20px 0 20px;
+}
+
+.contacts__headline {
+  font-family: @font-thin;
+  .font-parameter(24px, 29px);
+  color: @blue;
+
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 245px;
+  // padding-bottom: 34px;
+}
+
+.contacts__item {
+
+  &:nth-of-type(2) {
+    position: relative;
+    top: -3px;
+    left: 2px;
+  }
+}
+
+.contacts__item-title {
+  font-family: @font-bold;
+  font-size: 18px;
+  color: @blue;
+}
+
+.contacts__item-way {
+  display: block;
+
+  font-family: @font-thin;
+  font-size: 24px;
+  color: @crimson;
+  text-decoration: none;
+
+  &--mail {
+    &:hover {
+      color: @blue;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: fade(@blue, 10%);
+      text-decoration: none;
+    }
+  }
+}
+
+@media @tablet-widths {
+
+  .contacts__wrapper {
+    padding-top: 72px;
+  }
+
+  .contacts__headline {
+    .font-parameter(40px, 48px);
+
+    margin: 0 50px 42px 50px;
+  }
+
+  .contacts__list {
+    flex-direction: row;
+    justify-content: center;
+
+    min-height: 216px;
+    padding-bottom: 0;
+  }
+
+  .contacts__item {
+    width: 275px;
+
+    &:nth-child(2) {
+      position: static;
+      padding-left: 48px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 25px;
+    }
+  }
+
+  .contacts__item-way {
+    margin-top: 4px;
+  }
+}
+
+@media @desktop-widths {
+
+  .contacts__wrapper {
+    box-sizing: border-box;
+
+    padding-top: 118px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+  }
+
+  .contacts__headline {
+    .font-parameter(50px, 60px);
+
+    margin-bottom: 56px;
+    padding: 0 10% 0 10%;
+  }
+
+  .contacts__list {
+    justify-content: space-between;
+    align-items: flex-start;
+
+    min-height: 127px;
+  }
+
+  .contacts__item {
+
+    &:nth-child(1) {
+      position: relative;
+      left: -6px;
+    }
+
+    &:nth-child(2) {
+
+      order: 1;
+      margin-left: 12px;
+      padding-left: 46px;
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      left: 25px;
+
+      margin-top: 0;
+    }
+  }
+
+  .contacts__item-way {
+    margin-top: 21px;
+  }
+
+
+}

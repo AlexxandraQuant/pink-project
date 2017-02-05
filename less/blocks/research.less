@@ -1,0 +1,152 @@
+.research {
+  display: none;
+  .web-outline;
+
+}
+
+.research__wrapper {
+  .container();
+  .web-outline;
+  }
+
+@media @tablet-widths {
+
+  .research {
+    display: block;
+    background-color: @white;
+
+    z-index: 5;
+    position: relative;
+  }
+
+  .research__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 400px;
+
+    padding-top: 2px;
+  }
+
+  .research__diagram-wrapper {
+    position: relative;
+
+    padding-top: 25px;
+    padding-left: 4.3%;
+  }
+
+  .research__timer {
+    position: absolute;
+
+    height: 276px;
+    width: 239px;
+
+    top: -30px;
+    left: 10px;
+  }
+
+  .research__diagram {
+    display: block;
+
+    position: relative;
+    z-index: 1;
+
+    font-family: @font-bold;
+    .font-parameter(96px, 165px);
+    color: @crimson;
+
+    .resize(175px, 175px);
+
+    margin: auto;
+
+    border: 14px solid @crimson;
+    border-radius: 50%;
+  }
+
+  .research__description {
+    .font-parameter(14px, 24px);
+    text-align: left;
+
+    width: 47%;
+
+    padding-right: 3.3%;
+  }
+
+  .research__title {
+    font-family: @font-bold;
+    .font-parameter(30px, 36px);
+
+    width: 60%;
+
+    margin: 0;
+    margin-bottom: 11px;
+  }
+
+  .research__data {
+    color: @blue;
+
+    margin-bottom: 10px;
+  }
+
+  .research__link {
+    color: @crimson;
+    text-decoration: underline;
+  }
+}
+
+@media @desktop-widths {
+
+  .research {
+    background-color: @lightgray;
+  }
+
+  .research__wrapper {
+    padding-top: 16px;
+    padding-bottom: 26px;
+  }
+
+  .research__diagram-wrapper {
+    padding-left: 2.4%;
+    padding-top: 21px;
+  }
+
+  .research__timer {
+
+    height: 345px;
+    width: 299px;
+
+    top: -49px;
+    left: 0;
+  }
+
+  .research__diagram {
+    .font-parameter(120px, 207px);
+
+    .resize(220px, 220px);
+
+    border-width: 17px;
+
+  }
+
+  .research__description {
+    .font-parameter(18px, 30px);
+
+    width: 58%;
+
+    padding-top: 21px;
+    padding-right: 2.8%;
+  }
+
+  .research__title {
+    line-height: 30px;
+
+    width: auto;
+
+    margin-bottom: 26px;
+  }
+
+  .research__data {
+    margin-bottom: 30px;
+  }
+}
